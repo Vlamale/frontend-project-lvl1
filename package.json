@@ -1,11 +1,11 @@
 {
   "name": "@hexlet/code",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "type": "module",
   "description": "[![Actions Status](https://github.com/Vlamale/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/Vlamale/frontend-project-lvl1/actions)",
-  "main": "index.js",
   "bin": {
-    "brain-games": "bin/brain-games.js"
+    "brain-games": "bin/brain-games.js",
+    "brain-even": "bin/brain-even.js"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
