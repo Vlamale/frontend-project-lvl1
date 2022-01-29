@@ -16,7 +16,7 @@ export default function evenGame() {
 
     let correctAnswer = null;
     const progression = [];
-
+    /* eslint-disable no-plusplus */
     for (let i = 0; i < progressionLength; i++) {
       if (i === hiddenPosition - 1) {
         correctAnswer = randomNumber + step * i;
@@ -25,6 +25,7 @@ export default function evenGame() {
         progression.push(randomNumber + step * i);
       }
     }
+    /* eslint-enable no-plusplus */
 
     const expression = progression.join(' ');
 

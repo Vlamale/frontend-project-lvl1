@@ -9,11 +9,13 @@ export default function primeGame() {
   let isEnd = false;
 
   const getCorrectAnswer = (num) => {
+    /* eslint-disable no-plusplus */
     for (let i = 2; i <= num / 2; i++) {
       if (num % i === 0) {
         return 'no';
       }
     }
+    /* eslint-enable no-plusplus */
     return 'yes';
   };
 
