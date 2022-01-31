@@ -15,7 +15,7 @@ const generateData = () => {
   /* eslint-enable no-plusplus */
   const rightAnswer = progression.splice(hiddenPosition, 1, '..');
   return {
-    question: progression,
+    question: progression.join(' '),
     rightAnswer,
   };
 };
