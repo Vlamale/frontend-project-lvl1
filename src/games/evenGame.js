@@ -1,5 +1,5 @@
-import welcome from '../src/cli.js';
-import { askQuestion, generateRandomNumber, numberOfLevels } from '../src/index.js';
+import welcome from '../cli.js';
+import { askQuestion, generateRandomNumber, numberOfLevels } from '../index.js';
 
 export default function evenGame() {
   const userName = welcome();

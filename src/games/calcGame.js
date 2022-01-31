@@ -1,5 +1,5 @@
-import { askQuestion, generateRandomNumber, numberOfLevels } from '../src/index.js';
-import welcome from '../src/cli.js';
+import { askQuestion, generateRandomNumber, numberOfLevels } from '../index.js';
+import welcome from '../cli.js';
 
 export default function calcGame() {
   const userName = welcome();
