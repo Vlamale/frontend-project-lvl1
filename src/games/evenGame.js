@@ -1,18 +1,15 @@
-import welcome from '../cli.js';
-import { askQuestion, generateRandomNumber, numberOfLevels } from '../index.js';
+import { engine, generateRandomNumber } from '../index.js';
 
-export default function evenGame() {
-  const userName = welcome();
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+const getRightAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
 
-  let level = 1;
-  let isEnd = false;
+const generateData = () => {
+  const randomNumber = generateRandomNumber();
+  const rightAnswer = getRightAnswer(randomNumber);
+  return {
+    question: randomNumber,
+    rightAnswer,
+  };
+};
 
-  const getCorrectAnswer = (num) => (num % 2 === 0 ? 'yes' : 'no');
-
-  while (level <= numberOfLevels && !isEnd) {
-    const randomNumber = generateRandomNumber();
-    isEnd = askQuestion(randomNumber, getCorrectAnswer(randomNumber), userName, level);
-    level += 1;
-  }
-}
+export default () => engine(description, generateData);
